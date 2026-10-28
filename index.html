@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EBREAD: boards on the mat</title>
+<meta name="description" content="EBREAD is a bench of boards on a self-healing mat. Point at one for its specs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mat.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+
+<canvas id="mat" aria-hidden="true"></canvas>
+<canvas id="cuts" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="banner">
+    <div class="container banner__in">
+      <p>Nine boards on the bench. <a href="#talk">Send yours.</a></p>
+    </div>
+  </div>
+  <nav class="bar" aria-label="Site">
+    <div class="container bar__in">
+      <a class="wordmark" href="#top" aria-label="EBREAD, back to top">EBREAD</a>
+      <div class="bar__links">
+        <a href="#boards">On the mat</a>
+        <a href="#process">How a review runs</a>
+        <a href="#surface">The mat</a>
+        <a class="btn btn--ghost" href="#talk">Send a board</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__in">
+        <h1>Boards on the mat.</h1>
+        <p class="lead">A bench review of boards, each one turned in 3D.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#boards">See the boards</a>
+          <a class="btn btn--quiet" href="#process">How a review runs</a>
+        </div>
+        <p class="hero__hint">Drag the page to cut.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="boards">
+    <div class="container">
+      <div class="section__head">
+        <h2>On the mat</h2>
+        <p class="lead">Nine boards on the bench. Point at one.</p>
+      </div>
+      <div class="find">
+        <label class="visually-hidden" for="find">Find a board</label>
+        <input id="find" name="board" type="search" autocomplete="off" placeholder="Find a board">
+        <button class="btn btn--ghost" type="button" id="drift">Pause</button>
+      </div>
+      <div class="deck" id="deck">
+        <figure class="board is-on" tabindex="0">
+          <img src="images/esp32.png" alt="ESP32-C3 NodeMCU board, top view" loading="lazy">
+          <figcaption class="board__name">ESP32-C3</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>RISC-V, 160 MHz</dd></div>
+              <div><dt>SRAM</dt><dd>400 KB</dd></div>
+              <div><dt>Radio</dt><dd>Wi-Fi + BLE 5</dd></div>
+              <div><dt>GPIO</dt><dd>22 pins</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/uno.png" alt="Arduino Uno R3 board, top view" loading="lazy">
+          <figcaption class="board__name">Arduino Uno R3</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>ATmega328P, 16 MHz</dd></div>
+              <div><dt>Flash</dt><dd>32 KB</dd></div>
+              <div><dt>I/O</dt><dd>14 digital + 6 analog</dd></div>
+              <div><dt>Logic</dt><dd>5 V</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/pi.png" alt="Raspberry Pi 4 Model B board, top view" loading="lazy">
+          <figcaption class="board__name">Raspberry Pi 4 B</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>Quad A72, 1.5 GHz</dd></div>
+              <div><dt>RAM</dt><dd>up to 8 GB</dd></div>
+              <div><dt>GPIO</dt><dd>40-pin header</dd></div>
+              <div><dt>Power</dt><dd>5 V on a USB-C plug</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/pico.png" alt="Raspberry Pi Pico board, top and bottom" loading="lazy">
+          <figcaption class="board__name">Raspberry Pi Pico</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>RP2040 dual, 133 MHz</dd></div>
+              <div><dt>SRAM</dt><dd>264 KB</dd></div>
+              <div><dt>GPIO</dt><dd>26 pins</dd></div>
+              <div><dt>Logic</dt><dd>3.3 V</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/microbit.png" alt="BBC micro:bit V2 board, back view" loading="lazy">
+          <figcaption class="board__name">BBC micro:bit V2</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>nRF52833, 64 MHz</dd></div>
+              <div><dt>RAM</dt><dd>128 KB</dd></div>
+              <div><dt>Radio</dt><dd>BLE 5</dd></div>
+              <div><dt>On board</dt><dd>5×5 LED + mic</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/nano.png" alt="Arduino Nano board, top view" loading="lazy">
+          <figcaption class="board__name">Arduino Nano</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>ATmega328, 16 MHz</dd></div>
+              <div><dt>Flash</dt><dd>32 KB</dd></div>
+              <div><dt>I/O</dt><dd>22 pins</dd></div>
+              <div><dt>USB</dt><dd>mini-B</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/mega.png" alt="Arduino Mega 2560 R3 board, front" loading="lazy">
+          <figcaption class="board__name">Arduino Mega 2560</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>ATmega2560, 16 MHz</dd></div>
+              <div><dt>Flash</dt><dd>256 KB</dd></div>
+              <div><dt>I/O</dt><dd>54 digital + 16 analog</dd></div>
+              <div><dt>Logic</dt><dd>5 V</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/zero2w.png" alt="Raspberry Pi Zero 2 W board, top view" loading="lazy">
+          <figcaption class="board__name">Raspberry Pi Zero 2 W</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>Quad A53, 1 GHz</dd></div>
+              <div><dt>RAM</dt><dd>512 MB</dd></div>
+              <div><dt>Radio</dt><dd>Wi-Fi + BT 4.2</dd></div>
+              <div><dt>GPIO</dt><dd>40-pin header</dd></div>
+            </dl>
+          </div>
+        </figure>
+        <figure class="board" tabindex="0">
+          <img src="images/pill.png" alt="STM32 Blue Pill board, top view" loading="lazy">
+          <figcaption class="board__name">STM32 Blue Pill</figcaption>
+          <div class="board__spec">
+            <dl class="spec">
+              <div><dt>Core</dt><dd>Cortex-M3, 72 MHz</dd></div>
+              <div><dt>Flash</dt><dd>64 KB</dd></div>
+              <div><dt>SRAM</dt><dd>20 KB</dd></div>
+              <div><dt>Logic</dt><dd>3.3 V</dd></div>
+            </dl>
+          </div>
+        </figure>
+      </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section__head">
+        <h2>How a review runs</h2>
+        <p class="lead">Four stages, one string.</p>
+      </div>
+      <div class="run" data-draw>
+        <div class="stage">
+          <h3>1. On the mat</h3>
+          <p>Gerbers in, flat on the grid.</p>
+        </div>
+        <div class="stage">
+          <h3>2. Traces walked</h3>
+          <p>Every net followed, clearance noted.</p>
+        </div>
+        <div class="stage">
+          <h3>3. Joints checked</h3>
+          <p>Pads, vias and pours under the lens.</p>
+        </div>
+        <div class="stage">
+          <h3>4. Notes filed</h3>
+          <p>What to fix, what to keep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="surface">
+    <div class="container">
+      <div class="section__head">
+        <h2>The mat you are on</h2>
+        <p class="lead">A self-healing surface. It closes every cut you make.</p>
+      </div>
+      <div class="split">
+        <div class="split__text">
+          <p class="lead">A real mat forgets its scars.</p>
+          <ul class="split__facts">
+            <li><span class="num">10 mm</span> Minor grid, true metric at screen pitch</li>
+            <li><span class="num">50 mm</span> Major grid, printed heavier</li>
+            <li><span class="num">live</span> Ruler and coordinate readout, always on</li>
+            <li><span class="num">≈3 s</span> From open cut to closed surface</li>
+          </ul>
+        </div>
+        <figure class="split__fig">
+          <svg viewBox="0 0 560 400" role="img" aria-label="Plan of the cutting surface: a 10 mm minor grid, 50 mm majors, an edge ruler and two blade paths">
+            <rect x="60" y="20" width="440" height="300" fill="none" stroke="var(--color-rule)" stroke-width="1"/>
+            <rect x="65" y="25" width="430" height="290" fill="none" stroke="var(--color-rule-2)" stroke-width="1"/>
+            <g stroke="var(--color-grid)" stroke-width="1">
+              <line x1="120" y1="25" x2="120" y2="315"/><line x1="175" y1="25" x2="175" y2="315"/><line x1="230" y1="25" x2="230" y2="315"/><line x1="285" y1="25" x2="285" y2="315"/><line x1="340" y1="25" x2="340" y2="315"/><line x1="395" y1="25" x2="395" y2="315"/><line x1="450" y1="25" x2="450" y2="315"/>
+              <line x1="65" y1="75" x2="495" y2="75"/><line x1="65" y1="125" x2="495" y2="125"/><line x1="65" y1="175" x2="495" y2="175"/><line x1="65" y1="225" x2="495" y2="225"/><line x1="65" y1="275" x2="495" y2="275"/>
+            </g>
+            <g stroke="var(--color-grid-2)" stroke-width="1">
+              <line x1="230" y1="25" x2="230" y2="315"/><line x1="65" y1="175" x2="495" y2="175"/>
+            </g>
+            <line x1="120" y1="290" x2="230" y2="180" stroke="var(--color-ink)" stroke-width="1.6"/>
+            <line x1="285" y1="265" x2="395" y2="155" stroke="var(--color-ink)" stroke-width="1" opacity="0.3"/>
+            <rect x="60" y="20" width="26" height="300" fill="var(--color-paper-2)" stroke="var(--color-rule)" stroke-width="1"/>
+            <g stroke="var(--color-rule)" stroke-width="1">
+              <line x1="86" y1="45" x2="96" y2="45"/><line x1="86" y1="70" x2="92" y2="70"/><line x1="86" y1="95" x2="96" y2="95"/><line x1="86" y1="120" x2="92" y2="120"/><line x1="86" y1="145" x2="96" y2="145"/><line x1="86" y1="170" x2="92" y2="170"/><line x1="86" y1="195" x2="96" y2="195"/><line x1="86" y1="220" x2="92" y2="220"/><line x1="86" y1="245" x2="96" y2="245"/><line x1="86" y1="270" x2="92" y2="270"/><line x1="86" y1="295" x2="96" y2="295"/>
+            </g>
+            <g fill="var(--color-muted)" font-family="var(--font-outlier)" font-size="11">
+              <text x="92" y="38">ruler</text>
+              <text x="120" y="306">blade path</text>
+              <text x="300" y="285">healed</text>
+              <text x="230" y="18" text-anchor="middle">minor 10 mm</text>
+            </g>
+            <line x1="60" y1="350" x2="500" y2="350" stroke="var(--color-rule)" stroke-width="1"/>
+            <line x1="60" y1="357" x2="60" y2="343" stroke="var(--color-rule)" stroke-width="1" transform="rotate(45 60 350)"/>
+            <line x1="500" y1="357" x2="500" y2="343" stroke="var(--color-rule)" stroke-width="1" transform="rotate(45 500 350)"/>
+            <text x="280" y="342" text-anchor="middle" fill="var(--color-muted)" font-family="var(--font-outlier)" font-size="11">440 mm face</text>
+          </svg>
+          <figcaption>The surface in plan. Cut it and the line closes behind the blade.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" id="talk">
+    <div class="container section">
+      <div class="close__in">
+        <h2>Put a board on the mat.</h2>
+        <div class="close__body">
+          <p class="lead">Send the Gerbers or the board file, it renders here.</p>
+          <p class="close__contact"><span class="fill" data-fill="email">bench at circuit dot example</span></p>
+          <p class="close__note">The bench sits in <span class="fill" data-fill="city">city to be confirmed</span>. Notes come back in writing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <p class="mast__mark">EBREAD</p>
+    <div class="mast__links">
+      <a href="#boards">On the mat</a>
+      <a href="#process">How a review runs</a>
+      <a href="#surface">The mat</a>
+      <a href="#talk">Send a board</a>
+    </div>
+    <p class="mast__meta" data-credits>Photographs: <a href="https://commons.wikimedia.org/wiki/File:ESP32-C3_RISC-V_NodeMCU_board.jpg">Popolon</a>, <a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_R3_development_board_(1).jpg">Suyash Dwivedi</a>, <a href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Top.jpg">Laserlicht</a>, <a href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_Pico_top_and_bottom.jpg">Ogidya</a>, <a href="https://commons.wikimedia.org/wiki/File:Arduino_MEGA_2560_R3,_front_side.jpg">Dsimic</a>, <a href="https://commons.wikimedia.org/wiki/File:Raspberry_PI_Zero_2W_TOP_04.jpg">Suyash Dwivedi</a>, <a href="https://commons.wikimedia.org/wiki/File:Core_Learning_Board_module_Arduino_STM32_F103_C8T6.jpg">Popolon</a>, <a href="https://commons.wikimedia.org/wiki/File:BBC_micro_bit_v2.jpg">SimonWaldherr</a>, <a href="https://commons.wikimedia.org/wiki/File:Arduino_Nano.jpg">David Mellis</a>, all Wikimedia Commons.</p>
+    <p class="mast__meta">Set in Chakra Petch and IBM Plex on a self-healing mat. © 2026 EBREAD.</p>
+  </div>
+</footer>
+
+<div class="readout" aria-hidden="true"><span data-live id="rx">x 0000.0</span><span data-live id="ry">y 0000.0</span></div>
+
+<script src="mat.js" defer></script>
+<script src="deck.js" defer></script>
+</body>
+</html>

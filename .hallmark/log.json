@@ -1,0 +1,63 @@
+[
+ {
+  "shape": "Narrative Workflow",
+  "theme": "blueprint",
+  "axes": "mid/geometric-sans/neutral",
+  "hero": "Corridor",
+  "nav": "banner over a retracting bar",
+  "footer": "mast",
+  "imagery": "photographs, library 6, duotone on green",
+  "photos": [
+   "uno",
+   "esp32",
+   "pi",
+   "pico",
+   "microbit",
+   "nano"
+  ],
+  "entry": "boards deck",
+  "fingerprint": "narrative-workflow/corridor/banner-retracting/mast/deck",
+  "sections": [
+   "hero",
+   "deck of six boards, hover specs",
+   "stages on dimension string",
+   "split with plan figure",
+   "close band",
+   "mast"
+  ],
+  "signature": "self-healing cutting mat, drag to cut, heal ~3s; boards reveal spec registers on hover",
+  "waived": [
+   "47c"
+  ],
+  "prompt": "circuit board showcase, green self-healing cutting mat, hover specs, 2D photos",
+  "date": "2026-10-28",
+  "mode": "build"
+ },
+ {
+  "shape": "Narrative Workflow",
+  "theme": "blueprint",
+  "axes": "mid/geometric-sans/neutral",
+  "hero": "Corridor",
+  "nav": "banner over a retracting bar",
+  "footer": "mast",
+  "imagery": "none, mat surface + built 3D boards",
+  "photos": [],
+  "entry": "boards",
+  "fingerprint": "narrative-workflow/corridor/banner-retracting/mast",
+  "sections": [
+   "hero",
+   "bench switcher (3D viewer + spec register)",
+   "stages on dimension string",
+   "split with plan figure",
+   "close band",
+   "mast"
+  ],
+  "signature": "self-healing cutting mat surface, drag to cut, heal in ~3s; 3D PCBs on the mat",
+  "waived": [
+   "47c"
+  ],
+  "prompt": "circuit board review site, green self-healing cutting mat background, dynamic",
+  "date": "2026-10-28",
+  "mode": "build"
+ }
+]
