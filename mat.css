@@ -128,14 +128,14 @@ html { scroll-behavior: smooth; }
 @media (max-width: 40rem) { .cells { grid-template-columns: minmax(0, 1fr); } }
 
 /* organizer: labelled drawers */
-.orggrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); }
-.drawer { position: relative; min-height: 8rem; padding: var(--space-md); outline: var(--rule-hair) solid var(--color-rule); outline-offset: -1px; cursor: pointer; transition: transform var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out); }
-.drawer.is-open { transform: translateY(var(--space-sm)); background: var(--color-paper-3); }
+.orggrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xs); padding: var(--space-sm); background: var(--color-cabinet); outline: var(--rule-hair) solid var(--color-rule); outline-offset: -1px; }
+.drawer { position: relative; min-height: 8rem; padding: var(--space-md); background: color-mix(in oklab, var(--color-ink) 9%, transparent); outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 22%, transparent); outline-offset: -1px; cursor: pointer; transition: transform var(--dur-short) var(--ease-out), background-color var(--dur-short) var(--ease-out); }
+.drawer.is-open { transform: translateY(var(--space-sm)); background: color-mix(in oklab, var(--color-ink) 20%, transparent); }
 .drawer.is-open::after { transform: translateY(3px); }
 .drawer:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .bench { margin-top: var(--space-2xl); }
 .js .bench.is-on tbody { animation: pop var(--dur-long) var(--ease-out); }
-.drawer::after { content: ""; position: absolute; top: var(--space-xs); left: 50%; width: 2.5rem; height: 4px; margin-left: -1.25rem; border: var(--rule-hair) solid var(--color-rule); }
+.drawer::after { content: ""; position: absolute; top: var(--space-xs); left: 50%; width: 2.5rem; height: 5px; margin-left: -1.25rem; border: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 45%, transparent); border-top: 0; }
 .drawer h3 { margin-top: var(--space-md); margin-bottom: var(--space-2xs); font-size: var(--text-md); text-align: center; }
 .drawer p { font-size: var(--text-sm); color: var(--color-ink-2); text-align: center; }
 @media (max-width: 60rem) { .orggrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

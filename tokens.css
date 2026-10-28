@@ -9,7 +9,7 @@
   --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
   --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: oklch(36% 0.075 158); --color-paper-2: oklch(32% 0.07 159); --color-paper-3: oklch(27% 0.065 160);
+  --color-paper: oklch(36% 0.075 158); --color-paper-2: oklch(32% 0.07 159); --color-paper-3: oklch(27% 0.065 160); --color-cabinet: oklch(19% 0.03 160);
   --color-ink: oklch(97% 0.015 150); --color-ink-2: oklch(90% 0.028 152); --color-muted: oklch(80% 0.045 154);
   --color-rule: oklch(93% 0.02 150 / 0.85); --color-rule-2: oklch(93% 0.02 150 / 0.32);
   --color-grid: oklch(97% 0.01 150 / 0.09); --color-grid-2: oklch(97% 0.01 150 / 0.2);
