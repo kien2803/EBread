@@ -107,7 +107,6 @@ html { scroll-behavior: smooth; }
 .judge--bad { font-variant-numeric: tabular-nums; }
 .spec dd { margin: 0; font-family: var(--font-outlier); font-weight: 500; font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
 
-.chap { font-family: var(--font-outlier); font-size: 0.45em; font-weight: 500; font-variant-numeric: tabular-nums; }
 .chapter .lead a { color: var(--color-ink); }
 
 /* components: a register table */
