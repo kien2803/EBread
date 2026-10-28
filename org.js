@@ -42,7 +42,7 @@
     if (part && part.closest('.drawer').classList.contains('is-open')) {
       grid.querySelectorAll('.part.is-on').forEach((p) => p.classList.remove('is-on'));
       part.classList.add('is-on');
-      bench.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+      bench.scrollIntoView({ block: 'center', behavior: reduced ? 'auto' : 'smooth' });
       requestAnimationFrame(() => fly(part));
       return;
     }
