@@ -9,7 +9,8 @@
   if (!grid || !bench || !card) return;
 
   function fill(part) {
-    name.textContent = part.textContent;
+    name.textContent = part.textContent.trim();
+    document.getElementById('benchIcUse').setAttribute('href', 'icons.svg#ic-' + part.dataset.ic);
     spec.innerHTML =
       `<div><dt>Role</dt><dd>${part.dataset.role}</dd></div>` +
       `<div><dt>Package</dt><dd>${part.dataset.pkg}</dd></div>` +
