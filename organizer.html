@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EBREAD: the parts organizer</title>
+<meta name="description" content="The parts bin at EBREAD. Every drawer of the parts organizer, labelled.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mat.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+
+<canvas id="mat" aria-hidden="true"></canvas>
+<canvas id="cuts" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="banner">
+    <div class="container banner__in">
+      <p>Nine boards on the bench. <a href="index.html#talk">Send yours.</a></p>
+    </div>
+  </div>
+  <nav class="bar" aria-label="Site">
+    <div class="container bar__in">
+      <a class="wordmark" href="index.html" aria-label="EBREAD, back to boards">EBREAD</a>
+      <div class="bar__links">
+        <a href="index.html#boards">On the mat</a>
+        <a href="index.html#process">How a review runs</a>
+        <a href="index.html#surface">The mat</a>
+        <a href="components.html" >Components</a>
+        <a href="modules.html">Modules</a>
+        <a href="organizer.html" aria-current="page">Organizer</a>
+        <a class="btn btn--ghost" href="index.html#talk">Send a board</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Organizer</h2>
+        <p class="lead">Where the parts and modules live. Nine drawers, labelled.</p>
+      </div>
+            <div class="orggrid">
+        <div class="drawer">
+          <h3>Passives</h3>
+          <p>Resistor, Capacitor, Potentiometer</p>
+        </div>
+        <div class="drawer">
+          <h3>Semiconductors</h3>
+          <p>LED, Diode, Transistor, Regulator</p>
+        </div>
+        <div class="drawer">
+          <h3>Switches & sound</h3>
+          <p>Relay, Buzzer, Tact button</p>
+        </div>
+        <div class="drawer">
+          <h3>Displays</h3>
+          <p>OLED 0.96, MAX7219 matrix</p>
+        </div>
+        <div class="drawer">
+          <h3>Sensors</h3>
+          <p>DHT22, MPU6050, HC-SR04</p>
+        </div>
+        <div class="drawer">
+          <h3>Radio</h3>
+          <p>ESP-01, nRF24L01, SX1278, SIM800L, NEO-6M</p>
+        </div>
+        <div class="drawer">
+          <h3>Drivers & power</h3>
+          <p>L298N, A4988, LM2596, Buck</p>
+        </div>
+        <div class="drawer">
+          <h3>Memory & time</h3>
+          <p>DS3231, SD reader</p>
+        </div>
+        <div class="drawer">
+          <h3>Controllers</h3>
+          <p>ESP32-CAM, RC522, Pico W</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <p class="mast__mark">EBREAD</p>
+    <div class="mast__links">
+      <a href="index.html#boards">On the mat</a>
+      <a href="index.html#process">How a review runs</a>
+      <a href="index.html#surface">The mat</a>
+      <a href="components.html">Components</a>
+      <a href="index.html#talk">Send a board</a>
+    </div>
+    <p class="mast__meta">Set in Chakra Petch and IBM Plex on a self-healing mat. © 2026 EBREAD.</p>
+  </div>
+</footer>
+
+<div class="readout" aria-hidden="true"><span data-live id="rx">x 0000.0</span><span data-live id="ry">y 0000.0</span></div>
+
+<script src="mat.js" defer></script>
+</body>
+</html>
