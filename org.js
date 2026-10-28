@@ -18,6 +18,7 @@
         `<div><dt>Package</dt><dd>${part.dataset.pkg}</dd></div>` +
         `<div><dt>Note</dt><dd>${part.dataset.note}</dd></div>`;
       card.hidden = false;
+      bench.querySelector(".bench__hint").hidden = true;
       card.style.animation = 'none';
       void card.offsetWidth;
       card.style.animation = '';
