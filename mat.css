@@ -102,6 +102,9 @@ html { scroll-behavior: smooth; }
 .spec { margin: 0; border-top: var(--rule-hair) solid var(--color-rule); }
 .spec > div { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-2xs); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
 .spec dt { font-size: var(--text-sm); color: var(--color-ink-2); }
+.judge { margin-top: var(--space-2xs); font-size: var(--text-sm); }
+.judge--good { color: var(--color-ink); }
+.judge--bad { color: var(--color-muted); }
 .spec dd { margin: 0; font-family: var(--font-outlier); font-weight: 500; font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
 
 /* how a job runs: stages on one dimension string */
