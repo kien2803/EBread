@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EBREAD: components on the mat</title>
+<meta name="description" content="The parts bin at EBREAD. Every component on the bench, its role and its package.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mat.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+
+<canvas id="mat" aria-hidden="true"></canvas>
+<canvas id="cuts" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="banner">
+    <div class="container banner__in">
+      <p>Nine boards on the bench. <a href="index.html#talk">Send yours.</a></p>
+    </div>
+  </div>
+  <nav class="bar" aria-label="Site">
+    <div class="container bar__in">
+      <a class="wordmark" href="index.html" aria-label="EBREAD, back to boards">EBREAD</a>
+      <div class="bar__links">
+        <a href="index.html#boards">On the mat</a>
+        <a href="index.html#process">How a review runs</a>
+        <a href="index.html#surface">The mat</a>
+        <a href="components.html" aria-current="page">Components</a>
+        <a class="btn btn--ghost" href="index.html#talk">Send a board</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Components</h2>
+        <p class="lead">The parts bin. What each does and the shape it ships in.</p>
+      </div>
+      <table class="reg">
+        <thead><tr><th>Part</th><th>Role</th><th>Package</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>Resistor</td><td>limits current, sets levels</td><td class="num">0603 / THT</td><td>the one in everything</td></tr>
+          <tr><td>Capacitor</td><td>stores charge, smooths rails</td><td class="num">0805 / radial</td><td>decouple every IC</td></tr>
+          <tr><td>LED</td><td>light as a signal</td><td class="num">3 mm / 0603</td><td>never without its resistor</td></tr>
+          <tr><td>Diode</td><td>one-way valve</td><td class="num">SOD-123 / DO-35</td><td>polarity or smoke</td></tr>
+          <tr><td>Transistor</td><td>switch or amplify</td><td class="num">SOT-23 / TO-92</td><td>2N2222 and the MOSFETs</td></tr>
+          <tr><td>Regulator</td><td>voltage down, steady</td><td class="num">SOT-223 / TO-220</td><td>AMS1117 lives everywhere</td></tr>
+          <tr><td>DHT22</td><td>temperature and humidity</td><td class="num">4-pin module</td><td>slow but honest</td></tr>
+          <tr><td>MPU6050</td><td>gyro and accelerometer</td><td class="num">8-pin module</td><td>the motion staple</td></tr>
+          <tr><td>HC-SR04</td><td>ultrasonic distance</td><td class="num">4-pin module</td><td>two round eyes on every robot</td></tr>
+          <tr><td>Relay</td><td>a switch the coil throws</td><td class="num">sugar cube</td><td>small signal, big load</td></tr>
+          <tr><td>Buzzer</td><td>the cheapest voice</td><td class="num">12 mm disc</td><td>beeps the verdict</td></tr>
+          <tr><td>OLED 0.96″</td><td>a tiny readable face</td><td class="num">I2C module</td><td>128 by 64 of status</td></tr>
+          <tr><td>Potentiometer</td><td>a knob that divides</td><td class="num">3296 trim</td><td>the analog dial</td></tr>
+          <tr><td>Tact button</td><td>the press that counts</td><td class="num">6×6 mm</td><td>four legs, one click</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <p class="mast__mark">EBREAD</p>
+    <div class="mast__links">
+      <a href="index.html#boards">On the mat</a>
+      <a href="index.html#process">How a review runs</a>
+      <a href="index.html#surface">The mat</a>
+      <a href="components.html">Components</a>
+      <a href="index.html#talk">Send a board</a>
+    </div>
+    <p class="mast__meta">Set in Chakra Petch and IBM Plex on a self-healing mat. © 2026 EBREAD.</p>
+  </div>
+</footer>
+
+<div class="readout" aria-hidden="true"><span data-live id="rx">x 0000.0</span><span data-live id="ry">y 0000.0</span></div>
+
+<script src="mat.js" defer></script>
+</body>
+</html>

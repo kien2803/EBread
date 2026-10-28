@@ -107,6 +107,14 @@ html { scroll-behavior: smooth; }
 .judge--bad { color: var(--color-muted); }
 .spec dd { margin: 0; font-family: var(--font-outlier); font-weight: 500; font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
 
+/* components: a register table */
+.reg { width: 100%; border-collapse: collapse; font-size: var(--text-md); }
+.reg th { text-align: left; font-weight: 500; font-size: var(--text-sm); color: var(--color-ink-2); border-bottom: var(--rule-heavy) solid var(--color-rule); padding: var(--space-2xs) var(--space-sm) var(--space-2xs) 0; }
+.reg td { border-bottom: var(--rule-hair) solid var(--color-rule-2); padding: var(--space-sm) var(--space-sm) var(--space-sm) 0; color: var(--color-ink-2); }
+.reg td:first-child { color: var(--color-ink); font-weight: 500; white-space: nowrap; }
+.reg td.num { font-family: var(--font-outlier); font-size: var(--text-sm); white-space: nowrap; }
+.reg tbody tr:hover td { background: var(--color-paper-3); }
+
 /* how a job runs: stages on one dimension string */
 .run { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-columns); padding-top: var(--space-lg); }
 .run::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: var(--rule-hair); background: var(--color-rule); transform-origin: left; }
