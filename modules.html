@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EBREAD: modules on the mat</title>
-<meta name="description" content="The parts bin at EBREAD. Every module on the bench, its role and its shape.">
+<title>EBREAD: modules in drawers</title>
+<meta name="description" content="Every drawer of modules in drawers, labelled. Pick one and the parts land on the bench.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
         <a href="index.html#process">How a review runs</a>
         <a href="index.html#surface">The mat</a>
         <a href="components.html">Components</a>
-      <a href="modules.html" aria-current="page">Modules</a>
+        <a href="modules.html" aria-current="page">Modules</a>
         <a class="btn btn--ghost" href="index.html#talk">Send a board</a>
       </div>
     </div>
@@ -44,70 +44,52 @@
     <div class="container">
       <div class="section__head">
         <h2>Modules</h2>
-        <p class="lead">Bigger parts, bigger jobs. Whole functions on little boards.</p>
+        <p class="lead">Twelve modules, four drawers. Pick one and they land on the bench.</p>
       </div>
-            <div class="cells">
-        <div class="cell">
-          <h3>ESP-01</h3>
-          <p>Wi-Fi in two pins of space</p>
-          <p class="cell__meta"><span class="num">8-pin smd</span> · the ESP8266 alone</p>
+      <div class="orggrid" id="orggrid">
+        <div class="drawer" tabindex="0">
+          <h3>Radio</h3>
+          <p>Wi-Fi, cell, satellite, sub-gig</p>
+          <template>
+            <tr><td>ESP-01</td><td>Wi-Fi in two pins of space</td><td class="num">8-pin smd</td><td>the esp8266 alone</td></tr>
+            <tr><td>GSM</td><td>calls and texts</td><td class="num">lipo-fed board</td><td>2g still pays rent</td></tr>
+            <tr><td>GPS</td><td>fix, uart out</td><td class="num">small square</td><td>patient with sky</td></tr>
+            <tr><td>Sub-gig radio</td><td>long range, low power</td><td class="num">spi module</td><td>kilometres of quiet</td></tr>
+            <tr><td>2.4 link</td><td>short-range pair</td><td class="num">8-pin module</td><td>cheap as popcorn</td></tr>
+          </template>
         </div>
-        <div class="cell">
-          <h3>SIM800L</h3>
-          <p>calls and texts over GSM</p>
-          <p class="cell__meta"><span class="num">lipo-fed board</span> · 2G still pays rent</p>
+        <div class="drawer" tabindex="0">
+          <h3>Drivers &amp; power</h3>
+          <p>motors, steppers, volts</p>
+          <template>
+            <tr><td>Motor driver</td><td>drives two dc motors</td><td class="num">heatsink brick</td><td>lossy but loyal</td></tr>
+            <tr><td>Stepper driver</td><td>steps stepper motors</td><td class="num">tiny stick</td><td>microsteps for cnc</td></tr>
+            <tr><td>Buck converter</td><td>volts in, less volts out</td><td class="num">screw-terminal</td><td>the rail saver</td></tr>
+          </template>
         </div>
-        <div class="cell">
-          <h3>NEO-6M</h3>
-          <p>GPS fix, UART out</p>
-          <p class="cell__meta"><span class="num">small square</span> · patient with sky</p>
+        <div class="drawer" tabindex="0">
+          <h3>Memory &amp; time</h3>
+          <p>clock, storage</p>
+          <template>
+            <tr><td>Clock chip</td><td>keeps time honestly</td><td class="num">coin cell aboard</td><td>drift measured in seconds</td></tr>
+            <tr><td>SD reader</td><td>storage on spi</td><td class="num">6-pin module</td><td>logs the whole run</td></tr>
+          </template>
         </div>
-        <div class="cell">
-          <h3>RC522</h3>
-          <p>reads RFID tags</p>
-          <p class="cell__meta"><span class="num">spi module</span> · a wave at thirteen megahertz</p>
-        </div>
-        <div class="cell">
-          <h3>ESP32-CAM</h3>
-          <p>camera plus Wi-Fi</p>
-          <p class="cell__meta"><span class="num">full dev board</span> · streams on a whim</p>
-        </div>
-        <div class="cell">
-          <h3>SX1278</h3>
-          <p>LoRa long-range radio</p>
-          <p class="cell__meta"><span class="num">spi module</span> · kilometres of quiet</p>
-        </div>
-        <div class="cell">
-          <h3>nRF24L01</h3>
-          <p>2.4 GHz link</p>
-          <p class="cell__meta"><span class="num">8-pin module</span> · cheap as popcorn</p>
-        </div>
-        <div class="cell">
-          <h3>DS3231</h3>
-          <p>keeps time honestly</p>
-          <p class="cell__meta"><span class="num">coin cell aboard</span> · drift measured in seconds</p>
-        </div>
-        <div class="cell">
-          <h3>MAX7219</h3>
-          <p>drives LED matrices</p>
-          <p class="cell__meta"><span class="num">display module</span> · eight by eight, chained</p>
-        </div>
-        <div class="cell">
-          <h3>L298N</h3>
-          <p>drives two DC motors</p>
-          <p class="cell__meta"><span class="num">heatsink brick</span> · lossy but loyal</p>
-        </div>
-        <div class="cell">
-          <h3>A4988</h3>
-          <p>steps stepper motors</p>
-          <p class="cell__meta"><span class="num">tiny stick</span> · microsteps for CNC</p>
-        </div>
-        <div class="cell">
-          <h3>LM2596</h3>
-          <p>buck converter</p>
-          <p class="cell__meta"><span class="num">screw-terminal</span> · volts in, less volts out</p>
+        <div class="drawer" tabindex="0">
+          <h3>Controllers &amp; readers</h3>
+          <p>camera, card, display</p>
+          <template>
+            <tr><td>Cam board</td><td>camera plus Wi-Fi</td><td class="num">full dev board</td><td>streams on a whim</td></tr>
+            <tr><td>Card reader</td><td>reads rfid tags</td><td class="num">spi module</td><td>a wave at thirteen megahertz</td></tr>
+            <tr><td>Matrix driver</td><td>drives led matrices</td><td class="num">display module</td><td>eight by eight, chained</td></tr>
+          </template>
         </div>
       </div>
+
+      <table class="reg bench" id="bench">
+        <thead><tr><th>Part</th><th>Role</th><th>Package</th><th>Note</th></tr></thead>
+        <tbody id="benchRows"><tr><td colspan="4">Pick a drawer above.</td></tr></tbody>
+      </table>
     </div>
   </section>
 
@@ -122,7 +104,6 @@
       <a href="index.html#surface">The mat</a>
       <a href="components.html">Components</a>
       <a href="modules.html">Modules</a>
-      <a href="organizer.html">Organizer</a>
       <a href="index.html#talk">Send a board</a>
     </div>
     <p class="mast__meta">Set in Chakra Petch and IBM Plex on a self-healing mat. © 2026 EBREAD.</p>
@@ -132,5 +113,6 @@
 <div class="readout" aria-hidden="true"><span data-live id="rx">x 0000.0</span><span data-live id="ry">y 0000.0</span></div>
 
 <script src="mat.js" defer></script>
+<script src="org.js" defer></script>
 </body>
 </html>
