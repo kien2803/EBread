@@ -1,26 +1,39 @@
-/* The organizer: pick a drawer, it slides open and its parts land on the bench. */
+/* The organizer: open a drawer, its parts show; pick one and it lands on the bench. */
 (() => {
   const grid = document.getElementById('orggrid');
   const bench = document.getElementById('bench');
-  const rows = document.getElementById('benchRows');
-  if (!grid || !bench || !rows) return;
-
-  function openDrawer(d) {
-    grid.querySelectorAll('.drawer.is-open').forEach((x) => x.classList.remove('is-open'));
-    d.classList.add('is-open');
-    const tpl = d.querySelector('template');
-    if (tpl) rows.innerHTML = tpl.innerHTML;
-    bench.classList.add('is-on');
-    bench.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-  }
+  const card = document.getElementById('benchCard');
+  const name = document.getElementById('benchName');
+  const spec = document.getElementById('benchSpec');
+  if (!grid || !bench || !card) return;
 
   grid.addEventListener('click', (e) => {
+    const part = e.target.closest('.part');
+    if (part && part.closest('.drawer').classList.contains('is-open')) {
+      grid.querySelectorAll('.part.is-on').forEach((p) => p.classList.remove('is-on'));
+      part.classList.add('is-on');
+      name.textContent = part.textContent;
+      spec.innerHTML =
+        `<div><dt>Role</dt><dd>${part.dataset.role}</dd></div>` +
+        `<div><dt>Package</dt><dd>${part.dataset.pkg}</dd></div>` +
+        `<div><dt>Note</dt><dd>${part.dataset.note}</dd></div>`;
+      card.hidden = false;
+      card.style.animation = 'none';
+      void card.offsetWidth;
+      card.style.animation = '';
+      bench.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      return;
+    }
     const d = e.target.closest('.drawer');
-    if (d) openDrawer(d);
+    if (d) {
+      grid.querySelectorAll('.drawer.is-open').forEach((x) => { if (x !== d) x.classList.remove('is-open'); });
+      d.classList.toggle('is-open');
+    }
   });
+
   grid.addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
-    const d = e.target.closest('.drawer');
-    if (d) { e.preventDefault(); openDrawer(d); }
+    const t = e.target.closest('.drawer, .part');
+    if (t) { e.preventDefault(); t.click(); }
   });
 })();

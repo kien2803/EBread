@@ -50,46 +50,49 @@
         <div class="drawer" tabindex="0">
           <h3>Radio</h3>
           <p>Wi-Fi, cell, satellite, sub-gig</p>
-          <template>
-            <tr><td>ESP-01</td><td>Wi-Fi in two pins of space</td><td class="num">8-pin smd</td><td>the esp8266 alone</td></tr>
-            <tr><td>GSM</td><td>calls and texts</td><td class="num">lipo-fed board</td><td>2g still pays rent</td></tr>
-            <tr><td>GPS</td><td>fix, uart out</td><td class="num">small square</td><td>patient with sky</td></tr>
-            <tr><td>Sub-gig radio</td><td>long range, low power</td><td class="num">spi module</td><td>kilometres of quiet</td></tr>
-            <tr><td>2.4 link</td><td>short-range pair</td><td class="num">8-pin module</td><td>cheap as popcorn</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="Wi-Fi in two pins of space" data-pkg="8-pin smd" data-note="the esp8266 alone">ESP-01</button>
+          <button class="part" type="button" data-role="calls and texts" data-pkg="lipo-fed board" data-note="2g still pays rent">GSM</button>
+          <button class="part" type="button" data-role="fix, uart out" data-pkg="small square" data-note="patient with sky">GPS</button>
+          <button class="part" type="button" data-role="long range, low power" data-pkg="spi module" data-note="kilometres of quiet">Sub-gig radio</button>
+          <button class="part" type="button" data-role="short-range pair" data-pkg="8-pin module" data-note="cheap as popcorn">2.4 link</button>
+          </div>
         </div>
         <div class="drawer" tabindex="0">
           <h3>Drivers &amp; power</h3>
           <p>motors, steppers, volts</p>
-          <template>
-            <tr><td>Motor driver</td><td>drives two dc motors</td><td class="num">heatsink brick</td><td>lossy but loyal</td></tr>
-            <tr><td>Stepper driver</td><td>steps stepper motors</td><td class="num">tiny stick</td><td>microsteps for cnc</td></tr>
-            <tr><td>Buck converter</td><td>volts in, less volts out</td><td class="num">screw-terminal</td><td>the rail saver</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="drives two dc motors" data-pkg="heatsink brick" data-note="lossy but loyal">Motor driver</button>
+          <button class="part" type="button" data-role="steps stepper motors" data-pkg="tiny stick" data-note="microsteps for cnc">Stepper driver</button>
+          <button class="part" type="button" data-role="volts in, less volts out" data-pkg="screw-terminal" data-note="the rail saver">Buck converter</button>
+          </div>
         </div>
         <div class="drawer" tabindex="0">
           <h3>Memory &amp; time</h3>
           <p>clock, storage</p>
-          <template>
-            <tr><td>Clock chip</td><td>keeps time honestly</td><td class="num">coin cell aboard</td><td>drift measured in seconds</td></tr>
-            <tr><td>SD reader</td><td>storage on spi</td><td class="num">6-pin module</td><td>logs the whole run</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="keeps time honestly" data-pkg="coin cell aboard" data-note="drift measured in seconds">Clock chip</button>
+          <button class="part" type="button" data-role="storage on spi" data-pkg="6-pin module" data-note="logs the whole run">SD reader</button>
+          </div>
         </div>
         <div class="drawer" tabindex="0">
           <h3>Controllers &amp; readers</h3>
           <p>camera, card, display</p>
-          <template>
-            <tr><td>Cam board</td><td>camera plus Wi-Fi</td><td class="num">full dev board</td><td>streams on a whim</td></tr>
-            <tr><td>Card reader</td><td>reads rfid tags</td><td class="num">spi module</td><td>a wave at thirteen megahertz</td></tr>
-            <tr><td>Matrix driver</td><td>drives led matrices</td><td class="num">display module</td><td>eight by eight, chained</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="camera plus Wi-Fi" data-pkg="full dev board" data-note="streams on a whim">Cam board</button>
+          <button class="part" type="button" data-role="reads rfid tags" data-pkg="spi module" data-note="a wave at thirteen megahertz">Card reader</button>
+          <button class="part" type="button" data-role="drives led matrices" data-pkg="display module" data-note="eight by eight, chained">Matrix driver</button>
+          </div>
         </div>
       </div>
 
-      <table class="reg bench" id="bench">
-        <thead><tr><th>Part</th><th>Role</th><th>Package</th><th>Note</th></tr></thead>
-        <tbody id="benchRows"><tr><td colspan="4">Pick a drawer above.</td></tr></tbody>
-      </table>
+            <div class="bench" id="bench">
+        <p class="bench__hint">Pick a drawer, then a part.</p>
+        <div class="bench__card" id="benchCard" hidden>
+          <h3 id="benchName">Part</h3>
+          <dl class="spec" id="benchSpec"></dl>
+        </div>
+      </div>
     </div>
   </section>
 

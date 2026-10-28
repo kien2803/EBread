@@ -134,7 +134,16 @@ html { scroll-behavior: smooth; }
 .drawer.is-open::after { transform: translateY(3px); }
 .drawer:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .bench { margin-top: var(--space-2xl); }
-.js .bench.is-on tbody { animation: pop var(--dur-long) var(--ease-out); }
+.parts { display: none; flex-wrap: wrap; gap: var(--space-2xs); margin-top: var(--space-sm); }
+.drawer.is-open .parts { display: flex; }
+.part { padding: var(--space-2xs) var(--space-xs); border: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 30%, transparent); background: color-mix(in oklab, var(--color-ink) 6%, transparent); color: var(--color-ink-2); font: 500 var(--text-sm)/1.2 var(--font-body); cursor: pointer; }
+.part:hover { color: var(--color-ink); border-color: var(--color-ink); }
+.part.is-on { background: var(--color-ink); color: var(--color-paper); border-color: var(--color-ink); }
+.part:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.bench__hint { margin: var(--space-xl) 0; color: var(--color-muted); font-size: var(--text-sm); }
+.bench__card { max-width: 42ch; }
+.bench__card h3 { margin-bottom: var(--space-md); }
+.js .bench__card:not([hidden]) { animation: pop var(--dur-long) var(--ease-out); }
 .drawer::after { content: ""; position: absolute; top: var(--space-xs); left: 50%; width: 2.5rem; height: 5px; margin-left: -1.25rem; border: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 45%, transparent); border-top: 0; }
 .drawer h3 { margin-top: var(--space-md); margin-bottom: var(--space-2xs); font-size: var(--text-md); text-align: center; }
 .drawer p { font-size: var(--text-sm); color: var(--color-ink-2); text-align: center; }

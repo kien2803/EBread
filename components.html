@@ -50,54 +50,57 @@
         <div class="drawer" tabindex="0">
           <h3>Passives</h3>
           <p>limit, store, divide</p>
-          <template>
-            <tr><td>Resistor</td><td>limits current, sets levels</td><td class="num">0603 / tht</td><td>the one in everything</td></tr>
-            <tr><td>Capacitor</td><td>stores charge, smooths rails</td><td class="num">0805 / radial</td><td>decouple every IC</td></tr>
-            <tr><td>Potentiometer</td><td>a knob that divides</td><td class="num">3296 trim</td><td>the analog dial</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="limits current, sets levels" data-pkg="0603 / tht" data-note="the one in everything">Resistor</button>
+          <button class="part" type="button" data-role="stores charge, smooths rails" data-pkg="0805 / radial" data-note="decouple every IC">Capacitor</button>
+          <button class="part" type="button" data-role="a knob that divides" data-pkg="3296 trim" data-note="the analog dial">Potentiometer</button>
+          </div>
         </div>
         <div class="drawer" tabindex="0">
           <h3>Semiconductors</h3>
           <p>light, valve, switch, steady</p>
-          <template>
-            <tr><td>LED</td><td>light as a signal</td><td class="num">3 mm / 0603</td><td>never without its resistor</td></tr>
-            <tr><td>Diode</td><td>one-way valve</td><td class="num">sod-123 / do-35</td><td>polarity or smoke</td></tr>
-            <tr><td>Transistor</td><td>switch or amplify</td><td class="num">sot-23 / to-92</td><td>2n2222 and the mosfets</td></tr>
-            <tr><td>Regulator</td><td>voltage down, steady</td><td class="num">sot-223 / to-220</td><td>ams1117 lives everywhere</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="light as a signal" data-pkg="3 mm / 0603" data-note="never without its resistor">LED</button>
+          <button class="part" type="button" data-role="one-way valve" data-pkg="sod-123 / do-35" data-note="polarity or smoke">Diode</button>
+          <button class="part" type="button" data-role="switch or amplify" data-pkg="sot-23 / to-92" data-note="2n2222 and the mosfets">Transistor</button>
+          <button class="part" type="button" data-role="voltage down, steady" data-pkg="sot-223 / to-220" data-note="ams1117 lives everywhere">Regulator</button>
+          </div>
         </div>
         <div class="drawer" tabindex="0">
           <h3>Switches &amp; sound</h3>
           <p>press, throw, beep</p>
-          <template>
-            <tr><td>Relay</td><td>a switch the coil throws</td><td class="num">sugar cube</td><td>small signal, big load</td></tr>
-            <tr><td>Buzzer</td><td>the cheapest voice</td><td class="num">12 mm disc</td><td>beeps the verdict</td></tr>
-            <tr><td>Tact button</td><td>the press that counts</td><td class="num">6 x 6 mm</td><td>four legs, one click</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="a switch the coil throws" data-pkg="sugar cube" data-note="small signal, big load">Relay</button>
+          <button class="part" type="button" data-role="the cheapest voice" data-pkg="12 mm disc" data-note="beeps the verdict">Buzzer</button>
+          <button class="part" type="button" data-role="the press that counts" data-pkg="6 x 6 mm" data-note="four legs, one click">Tact button</button>
+          </div>
         </div>
         <div class="drawer" tabindex="0">
           <h3>Displays</h3>
           <p>a tiny readable face</p>
-          <template>
-            <tr><td>OLED 0.96</td><td>a tiny readable face</td><td class="num">i2c module</td><td>128 by 64 of status</td></tr>
-            <tr><td>Matrix driver</td><td>drives led grids</td><td class="num">display module</td><td>eight by eight, chained</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="a tiny readable face" data-pkg="i2c module" data-note="128 by 64 of status">OLED 0.96</button>
+          <button class="part" type="button" data-role="drives led grids" data-pkg="display module" data-note="eight by eight, chained">Matrix driver</button>
+          </div>
         </div>
         <div class="drawer" tabindex="0">
           <h3>Sensors</h3>
           <p>temperature, motion, distance</p>
-          <template>
-            <tr><td>Temp + humidity</td><td>weather in two numbers</td><td class="num">4-pin module</td><td>slow but honest</td></tr>
-            <tr><td>Gyro + accel</td><td>motion on six axes</td><td class="num">8-pin module</td><td>the motion staple</td></tr>
-            <tr><td>Ultrasonic</td><td>distance by echo</td><td class="num">4-pin module</td><td>two round eyes on every robot</td></tr>
-          </template>
+                    <div class="parts">
+          <button class="part" type="button" data-role="weather in two numbers" data-pkg="4-pin module" data-note="slow but honest">Temp + humidity</button>
+          <button class="part" type="button" data-role="motion on six axes" data-pkg="8-pin module" data-note="the motion staple">Gyro + accel</button>
+          <button class="part" type="button" data-role="distance by echo" data-pkg="4-pin module" data-note="two round eyes on every robot">Ultrasonic</button>
+          </div>
         </div>
       </div>
 
-      <table class="reg bench" id="bench">
-        <thead><tr><th>Part</th><th>Role</th><th>Package</th><th>Note</th></tr></thead>
-        <tbody id="benchRows"><tr><td colspan="4">Pick a drawer above.</td></tr></tbody>
-      </table>
+            <div class="bench" id="bench">
+        <p class="bench__hint">Pick a drawer, then a part.</p>
+        <div class="bench__card" id="benchCard" hidden>
+          <h3 id="benchName">Part</h3>
+          <dl class="spec" id="benchSpec"></dl>
+        </div>
+      </div>
     </div>
   </section>
 
