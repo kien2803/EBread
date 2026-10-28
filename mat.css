@@ -60,7 +60,7 @@ html { scroll-behavior: smooth; }
 .hero h1 { font-size: clamp(3rem, 6vw + 1rem, 6rem); text-transform: uppercase; line-height: 1.02; }
 .hero .lead { margin-top: var(--space-lg); color: var(--color-ink-2); }
 .hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-sm); margin-top: var(--space-xl); }
-.hero__hint { margin-top: var(--space-lg); font-size: var(--text-sm); color: var(--color-muted); }
+.hero__hint { margin-top: var(--space-lg); font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
 
 /* ---------- sections ---------- */
 
@@ -74,7 +74,7 @@ html { scroll-behavior: smooth; }
 .find { display: flex; gap: var(--space-sm); max-width: 26rem; margin-bottom: var(--space-xl); }
 .find input { flex: 1; min-width: 0; min-height: 48px; padding: 0 var(--space-md); border: var(--rule-hair) solid var(--color-rule); background: var(--color-paper-3); color: var(--color-ink); font: 400 var(--text-md)/1 var(--font-body); outline: 2px solid transparent; outline-offset: -3px; }
 .find input:focus-visible { outline-color: var(--color-focus); }
-.find input::placeholder { color: var(--color-muted); }
+.find input::placeholder { font-variant-numeric: tabular-nums; }
 .deck { display: flex; flex-wrap: nowrap; align-items: stretch; gap: var(--gap-columns); overflow-x: auto; overscroll-behavior-x: contain; padding: var(--space-3xs) var(--space-3xs) var(--space-md); scrollbar-width: none; }
 .deck::before, .deck::after { content: ""; flex: 0 0 calc(50% - 90px); }
 .deck .board { flex: 0 0 170px; aspect-ratio: 4 / 5; cursor: pointer; }
@@ -104,8 +104,11 @@ html { scroll-behavior: smooth; }
 .spec dt { font-size: var(--text-sm); color: var(--color-ink-2); }
 .judge { margin-top: var(--space-2xs); font-size: var(--text-sm); }
 .judge--good { color: var(--color-ink); }
-.judge--bad { color: var(--color-muted); }
+.judge--bad { font-variant-numeric: tabular-nums; }
 .spec dd { margin: 0; font-family: var(--font-outlier); font-weight: 500; font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
+
+.chap { font-family: var(--font-outlier); font-size: 0.45em; font-weight: 500; font-variant-numeric: tabular-nums; }
+.chapter .lead a { color: var(--color-ink); }
 
 /* components: a register table */
 .reg { width: 100%; border-collapse: collapse; font-size: var(--text-md); }
@@ -147,7 +150,7 @@ html { scroll-behavior: smooth; }
 .split__facts .num { color: var(--color-ink); font-family: var(--font-outlier); font-weight: 500; min-width: 7ch; }
 .split__fig { grid-column: 7 / 13; margin: 0; }
 .split__fig svg { width: 100%; height: auto; border: var(--rule-hair) solid var(--color-rule); background: var(--color-paper-3); }
-.split__fig figcaption { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
+.split__fig figcaption { margin-top: var(--space-sm); font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
 
 /* close: a sheet laid on the mat */
 .close { background: var(--color-paper); border-block: var(--rule-hair) solid var(--color-rule); }
@@ -156,7 +159,7 @@ html { scroll-behavior: smooth; }
 .close__body { grid-column: 7 / 13; }
 .close__body .lead { color: var(--color-ink-2); }
 .close__contact { margin-top: var(--space-xl); font-family: var(--font-outlier); font-weight: 500; font-size: var(--text-xl); }
-.close__note { margin-top: var(--space-lg); font-size: var(--text-sm); color: var(--color-muted); }
+.close__note { margin-top: var(--space-lg); font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
 
 /* a fact the prompt did not give */
 .fill { padding: 0 0.25em; border: var(--rule-hair) dashed color-mix(in oklch, var(--color-muted) 70%, transparent); color: var(--color-muted); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
@@ -168,7 +171,7 @@ html { scroll-behavior: smooth; }
 .mast__links { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-lg); margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule-2); }
 .mast__links a { font-size: var(--text-sm); color: var(--color-ink-2); text-decoration: none; white-space: nowrap; }
 .mast__links a:hover { color: var(--color-ink); }
-.mast__meta { margin-top: var(--space-xl); font-size: var(--text-sm); color: var(--color-muted); }
+.mast__meta { margin-top: var(--space-xl); font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
 .mast__meta + .mast__meta { margin-top: var(--space-xs); }
 .mast__meta a { color: inherit; }
 
