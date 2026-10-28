@@ -10,7 +10,9 @@
 
   function fill(part) {
     name.textContent = part.textContent.trim();
-    document.getElementById('benchIcUse').setAttribute('href', 'icons.svg#ic-' + part.dataset.ic);
+    const ic = document.getElementById('benchIcUse'), img = document.getElementById('benchImg');
+    if (part.dataset.img) { img.src = part.dataset.img; img.hidden = false; ic.parentElement.hidden = true; }
+    else { img.hidden = true; ic.parentElement.hidden = false; ic.setAttribute('href', 'icons.svg#ic-' + part.dataset.ic); }
     spec.innerHTML =
       `<div><dt>Role</dt><dd>${part.dataset.role}</dd></div>` +
       `<div><dt>Package</dt><dd>${part.dataset.pkg}</dd></div>` +
