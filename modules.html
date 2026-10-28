@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EBREAD: modules on the mat</title>
+<meta name="description" content="The parts bin at EBREAD. Every module on the bench, its role and its shape.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="mat.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+
+<canvas id="mat" aria-hidden="true"></canvas>
+<canvas id="cuts" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="banner">
+    <div class="container banner__in">
+      <p>Nine boards on the bench. <a href="index.html#talk">Send yours.</a></p>
+    </div>
+  </div>
+  <nav class="bar" aria-label="Site">
+    <div class="container bar__in">
+      <a class="wordmark" href="index.html" aria-label="EBREAD, back to boards">EBREAD</a>
+      <div class="bar__links">
+        <a href="index.html#boards">On the mat</a>
+        <a href="index.html#process">How a review runs</a>
+        <a href="index.html#surface">The mat</a>
+        <a href="components.html">Components</a>
+      <a href="modules.html">Modules</a>
+        <a href="modules.html" aria-current="page">Components</a>
+        <a class="btn btn--ghost" href="index.html#talk">Send a board</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Modules</h2>
+        <p class="lead">Bigger parts, bigger jobs. Whole functions on little boards.</p>
+      </div>
+      <table class="reg">
+        <thead><tr><th>Part</th><th>Role</th><th>Shape</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>ESP-01</td><td>Wi-Fi in two pins of space</td><td class="num">8-pin SMD</td><td>the ESP8266 alone</td></tr>
+          <tr><td>SIM800L</td><td>calls and texts over GSM</td><td class="num">lipo-fed board</td><td>2G still pays rent</td></tr>
+          <tr><td>NEO-6M</td><td>GPS fix, UART out</td><td class="num">small square</td><td>patient with sky</td></tr>
+          <tr><td>RC522</td><td>reads RFID tags</td><td class="num">SPI module</td><td>a wave at thirteen megahertz</td></tr>
+          <tr><td>ESP32-CAM</td><td>camera plus Wi-Fi</td><td class="num">full dev board</td><td>streams on a whim</td></tr>
+          <tr><td>SX1278</td><td>LoRa long-range radio</td><td class="num">SPI module</td><td>kilometres of quiet</td></tr>
+          <tr><td>nRF24L01</td><td>2.4 GHz link</td><td class="num">8-pin module</td><td>cheap as popcorn</td></tr>
+          <tr><td>DS3231</td><td>keeps time honestly</td><td class="num">coin cell aboard</td><td>drift measured in seconds</td></tr>
+          <tr><td>MAX7219</td><td>drives LED matrices</td><td class="num">display module</td><td>eight by eight, chained</td></tr>
+          <tr><td>L298N</td><td>drives two DC motors</td><td class="num">heatsink brick</td><td>lossy but loyal</td></tr>
+          <tr><td>A4988</td><td>steps stepper motors</td><td class="num">tiny stick</td><td>microsteps for CNC</td></tr>
+          <tr><td>LM2596</td><td>buck converter</td><td class="num">screw-terminal</td><td>volts in, less volts out</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <p class="mast__mark">EBREAD</p>
+    <div class="mast__links">
+      <a href="index.html#boards">On the mat</a>
+      <a href="index.html#process">How a review runs</a>
+      <a href="index.html#surface">The mat</a>
+      <a href="components.html">Components</a>
+      <a href="modules.html">Modules</a>
+      <a href="index.html#talk">Send a board</a>
+    </div>
+    <p class="mast__meta">Set in Chakra Petch and IBM Plex on a self-healing mat. © 2026 EBREAD.</p>
+  </div>
+</footer>
+
+<div class="readout" aria-hidden="true"><span data-live id="rx">x 0000.0</span><span data-live id="ry">y 0000.0</span></div>
+
+<script src="mat.js" defer></script>
+</body>
+</html>
